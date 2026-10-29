@@ -1,7 +1,12 @@
 __pycache__/
 *.pyc
 .env
+jobs/
+logs/
+results/
+.harbor/
 tasks/*/jobs/
 tasks/*/logs/
 tasks/*/results/
 .generated-launch-configs/
+node_modules/

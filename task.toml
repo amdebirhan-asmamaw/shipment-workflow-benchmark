@@ -1,0 +1,42 @@
+schema_version = "1.4"
+
+[[artifacts]]
+source = "/app/"
+exclude = [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/*.tmp",
+]
+
+[task]
+name = "amdebirhan/shipment-workflow-benchmark"
+version = "1.0.0"
+description = "Implement a crash-safe binary write-ahead log (WAL), torn-tail recovery, atomic snapshot compaction, and a SHA-256 command-idempotent shipment workflow state machine in TypeScript."
+keywords = [
+    "storage",
+    "write-ahead-log",
+    "crash-recovery",
+    "state-machine",
+    "idempotency",
+    "typescript",
+]
+
+[metadata]
+difficulty = "hard"
+category = "implementation"
+
+[agent]
+timeout_sec = 72000.0
+user = "agent"
+
+[verifier]
+environment_mode = "separate"
+timeout_sec = 1800.0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 1200.0
+cpus = 4
+memory_mb = 4096
+storage_mb = 10240
+
